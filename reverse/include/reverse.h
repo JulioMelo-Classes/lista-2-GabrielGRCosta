@@ -13,10 +13,15 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
-template<class BidirIt>
-void reverse(BidirIt first, BidirIt last)
-{
-    // TODO
+template<typename Banana>
+void reverse(Banana first, Banana last)
+{ 
+  while(first<last){ 
+  //for(Banana i=first; i < last-1;i++)tips:banana==itr
+    std::swap(*first,*(last-1));
+    first++;
+    last--;
+  }
 }
 
 }

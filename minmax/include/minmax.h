@@ -23,11 +23,24 @@ namespace graal {
  * @return Um std::pair contendo o menor e maior elemento, nesta ordem
  *
  */
+
 template <typename Itr, typename Compare >
 std::pair<Itr, Itr> minmax( Itr first, Itr last, Compare cmp )
 {
-    // TODO
-    return std::make_pair( first, first );
+  if(first==last)
+    return std::make_pair(first,first);  
+  else{
+      Itr max= first;
+      Itr min= first;
+    for(Itr i=first; i != last; i++){
+      if(!cmp(*i,*max)) 
+        max = i;
+      if(cmp(*i,*min))
+        min = i;  
+    }
+   return std::make_pair(min,max);  
+  }
+
 }
 
 }

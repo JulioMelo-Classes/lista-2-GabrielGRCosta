@@ -16,8 +16,12 @@ namespace graal {
 template<class InputIt, class T, class Equal>
 InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
 {
-    // TODO
-    return first;
+  for(InputIt i=first; i!= last; i++){
+    if(eq(*i,value)){
+      return i;
+    }
+  }
+    return last;
 }
 
 }
