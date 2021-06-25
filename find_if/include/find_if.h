@@ -16,26 +16,15 @@ namespace graal {
 template<class InputIt, class UnaryPredicate>
 InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
 {
-<<<<<<< HEAD
-  for(InputIt i=first; i!=last; i++){
-    /*if(p(*first)==false){
-        return last;
-    }*/
+ for(InputIt i=first; i!=last; i++){ 
     if(p(*i)){ 
       return i;
-    }
+    }  
+    
   }
-  return last;  
-=======
-    while(first!=last){
-      if(p(*first)==false){
-        return last;
-      }
-      else{ 
-        return first;
-      }
+  return last;
 }
->>>>>>> 33826b73580ae20786e8828ddac0c4d7d8acc494
+
 
 }
 #endif
