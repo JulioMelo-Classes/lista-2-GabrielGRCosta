@@ -85,7 +85,7 @@ int main ( void )
         int A[]{ 1, 10, 2, 9, 3, 8, 4, 7, 5, 6 };
         int A_E[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-        auto predicate = []( const int& e )->bool{ return e > 5; };
+        auto predicate = []( const int& e )->bool{ return e < 5; };
 
         auto result = which_lib::partition( std::begin(A), std::end(A), predicate );
         EXPECT_EQ( std::distance( std::begin(A), result ), 5 );

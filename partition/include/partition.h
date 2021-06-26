@@ -16,8 +16,21 @@ namespace graal {
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
 {
-    // TODO
-    return last;
+  for( ForwardIt i=first; i!=last; i++) {
+    while (p(*first)) { 
+      first++;
+      if(first==last)
+        return first;
+    }
+    do {
+      last--;
+      if (first==last)
+       return first;
+    } while (!p(*last));
+    std::swap(*first,*last);
+    first++;
+  }
+  return first;
 }
 
 }

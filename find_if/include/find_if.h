@@ -20,7 +20,6 @@ InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
     if(p(*i)){ 
       return i;
     }  
-    
   }
   return last;
 }

@@ -13,8 +13,8 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
-template<typename Banana>
-void reverse(Banana first, Banana last)
+template < typename Itr >
+void reverse( Itr first, Itr last )
 { 
   while(first<last){ 
   //for(Banana i=first; i < last-1;i++)tips:banana==itr
