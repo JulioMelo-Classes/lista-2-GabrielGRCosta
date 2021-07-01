@@ -13,6 +13,9 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+ /*
+ não vou considerar.
+ */
 template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
 {
@@ -22,7 +25,7 @@ InputIt unique( InputIt first, InputIt last, Equal eq )
       *b+=*i;
     }
   }  
-  return b++;
+  return b++; //realmente não entendi, vc retorna b++, mas não faz mudanças em b, apenas no seu conteúdo. 
 }
 
 }

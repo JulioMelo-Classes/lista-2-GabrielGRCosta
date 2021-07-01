@@ -13,6 +13,9 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+ /*
+ 80%
+ */
 template<class InputIt, class T, class Equal>
 InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
 {
@@ -21,7 +24,7 @@ InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
       return i;
     }
   }
-    return last;
+    return last; //!!
 }
 
 }
